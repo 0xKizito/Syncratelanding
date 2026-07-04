@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Syncrate</title>
+  <meta
+    name="description"
+    content="Syncrate is building infrastructure that channels onchain capital into real-world gold trade financing across Africa."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Geist -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root{
+      --blue:#2D7FF9;
+      --blue-dark:#1B64D8;
+      --text:#0F172A;
+      --muted:#64748B;
+      --border:#E2E8F0;
+      --background:#FFFFFF;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Geist",sans-serif;
+      background:var(--background);
+      color:var(--text);
+      min-height:100vh;
+      overflow-x:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      position:relative;
+    }
+
+    /* Background glow */
+
+    body::before{
+      content:"";
+      position:fixed;
+      width:700px;
+      height:700px;
+      background:radial-gradient(circle,var(--blue) 0%,transparent 70%);
+      opacity:.08;
+      top:-250px;
+      right:-250px;
+      filter:blur(30px);
+      pointer-events:none;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      width:600px;
+      height:600px;
+      background:radial-gradient(circle,#64B5FF 0%,transparent 70%);
+      opacity:.06;
+      bottom:-220px;
+      left:-220px;
+      filter:blur(40px);
+      pointer-events:none;
+    }
+
+    .container{
+      width:100%;
+      max-width:760px;
+      text-align:center;
+      z-index:2;
+    }
+
+    .badge{
+
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+
+      padding:10px 18px;
+
+      border:1px solid rgba(45,127,249,.18);
+      background:rgba(45,127,249,.05);
+
+      border-radius:999px;
+
+      color:var(--blue);
+
+      font-size:14px;
+      font-weight:600;
+
+      margin-bottom:40px;
+    }
+
+    .pulse{
+
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--blue);
+
+      animation:pulse 2s infinite;
+    }
+
+    @keyframes pulse{
+
+      0%{
+        transform:scale(1);
+        opacity:1;
+      }
+
+      70%{
+        transform:scale(2.5);
+        opacity:0;
+      }
+
+      100%{
+        opacity:0;
+      }
+
+    }
+
+    h1{
+
+      font-size:clamp(3rem,8vw,5.4rem);
+
+      line-height:.95;
+
+      letter-spacing:-3px;
+
+      font-weight:800;
+
+      margin-bottom:28px;
+
+    }
+
+    .highlight{
+
+      color:var(--blue);
+
+    }
+
+    .description{
+
+      max-width:640px;
+
+      margin:0 auto;
+
+      color:var(--muted);
+
+      font-size:20px;
+
+      line-height:1.75;
+
+    }
+
+    .buttons{
+
+      margin-top:48px;
+
+      display:flex;
+
+      justify-content:center;
+
+      gap:16px;
+
+      flex-wrap:wrap;
+
+    }
+
+    .primary{
+
+      text-decoration:none;
+
+      background:var(--blue);
+
+      color:#fff;
+
+      padding:17px 28px;
+
+      border-radius:14px;
+
+      font-weight:600;
+
+      transition:.25s ease;
+
+      box-shadow:0 15px 35px rgba(45,127,249,.22);
+
+    }
+
+    .primary:hover{
+
+      background:var(--blue-dark);
+
+      transform:translateY(-3px);
+
+      box-shadow:0 22px 45px rgba(45,127,249,.30);
+
+    }
+
+    .secondary{
+
+      text-decoration:none;
+
+      color:var(--text);
+
+      border:1px solid var(--border);
+
+      padding:17px 28px;
+
+      border-radius:14px;
+
+      font-weight:600;
+
+      transition:.25s;
+
+      background:#fff;
+
+    }
+
+    .secondary:hover{
+
+      background:#F8FAFC;
+
+    }
+
+    footer{
+
+      margin-top:80px;
+
+      color:#94A3B8;
+
+      font-size:14px;
+
+      line-height:1.7;
+
+    }
+
+    @media(max-width:640px){
+
+      .description{
+
+        font-size:17px;
+
+      }
+
+      .buttons{
+
+        flex-direction:column;
+
+      }
+
+      .primary,
+      .secondary{
+
+        width:100%;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="badge">
+    <span class="pulse"></span>
+    Frontend currently in development
+  </div>
+
+  <h1>
+    Building the future of
+    <span class="highlight">tokenized gold finance.</span>
+  </h1>
+
+  <p class="description">
+    Syncrate is building infrastructure that channels onchain capital into
+    short-cycle, real-world gold trade financing across Africa.
+    <br><br>
+    While our platform is under construction, follow our latest research,
+    product updates and ecosystem insights through our
+    <strong>State of Settlement</strong> newsletter.
+  </p>
+
+  <div class="buttons">
+
+    <a
+      class="primary"
+      href="https://www.linkedin.com/newsletters/state-of-settlement-7462064760692457472"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Read the Newsletter →
+    </a>
+
+    <a
+      class="secondary"
+      href="https://www.linkedin.com/company/syncrate"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Follow Syncrate
+    </a>
+
+  </div>
+
+  <footer>
+    © 2026 Syncrate.<br>
+    Infrastructure for real-world settlement.
+  </footer>
+
+</div>
+
+</body>
+</html>
